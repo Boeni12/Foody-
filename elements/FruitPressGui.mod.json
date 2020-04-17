@@ -1,0 +1,72 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Fruit-Press",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Fruit-Press",
+          "x": 369,
+          "y": 81
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 293,
+          "y": 126
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 292,
+          "y": 177
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "name": "Slot #2",
+          "x": 390,
+          "y": 155
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Press!",
+          "onClick": {
+            "name": "PressFruitProcedure"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Press!",
+          "x": 464,
+          "y": 154
+        }
+      }
+    ]
+  }
+}

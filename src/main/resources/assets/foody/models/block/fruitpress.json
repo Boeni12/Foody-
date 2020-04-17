@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "foody:blocks/empty",
+    "down": "foody:blocks/empty",
+    "up": "foody:blocks/empty",
+    "north": "foody:blocks/empty",
+    "east": "foody:blocks/empty",
+    "south": "foody:blocks/empty",
+    "west": "foody:blocks/empty",
     "particle": "foody:blocks/empty"
   }
 }
