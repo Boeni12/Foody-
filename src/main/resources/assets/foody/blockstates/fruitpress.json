@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "foody:block/fruitpress"
+    },
+    "facing=east": {
+      "model": "foody:block/fruitpress",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "foody:block/fruitpress",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "foody:block/fruitpress",
+      "y": 270
     }
   }
 }

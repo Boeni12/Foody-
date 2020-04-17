@@ -1,12 +1,11 @@
 {
-  "parent": "block/cube",
+  "parent": "foody:custom/fruit_press",
   "textures": {
-    "down": "foody:blocks/empty",
-    "up": "foody:blocks/empty",
-    "north": "foody:blocks/empty",
-    "east": "foody:blocks/empty",
-    "south": "foody:blocks/empty",
-    "west": "foody:blocks/empty",
-    "particle": "foody:blocks/empty"
+    "all": "foody:blocks/spruce_planks",
+    "particle": "foody:blocks/spruce_planks",
+    "0": "foody:blocks/anvil",
+    "1": "foody:blocks/spruce_planks",
+    "2": "foody:blocks/oak_log",
+    "missing": "foody:blocks/"
   }
 }

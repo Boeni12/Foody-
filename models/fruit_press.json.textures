@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "anvil",
+        "1": "spruce_planks",
+        "2": "oak_log",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

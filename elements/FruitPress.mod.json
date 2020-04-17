@@ -2,15 +2,15 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "empty",
+    "texture": "spruce_planks",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 10,
-    "customModelName": "Normal",
-    "rotationMode": 0,
+    "renderType": 2,
+    "customModelName": "fruit_press:default",
+    "rotationMode": 1,
     "hasTransparency": true,
     "transparencyType": "SOLID",
     "mx": 0.0,
@@ -56,7 +56,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "SCAFFOLDING"
     },
     "luminance": 0.0,
     "unbreakable": false,
