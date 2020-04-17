@@ -88,6 +88,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "FruitPressAdvancement",
+      "type": "achievement",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -95,9 +103,11 @@
   "language_map": {
     "en_us": {
       "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
+      "advancements.fruitpressadvancement.descr": "You press that thing!!!",
       "block.foody.fruitpress": "Fruit Press",
       "block.foody.pealer": "Pealer",
       "itemGroup.tabfoodytabfood": "Foody+ Food",
+      "advancements.fruitpressadvancement.title": "Fruit Press Advancement",
       "block.foody.craftingtable": "Craftingtable"
     }
   },
