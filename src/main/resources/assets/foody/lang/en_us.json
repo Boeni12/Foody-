@@ -1,3 +1,6 @@
 {
-  "block.foody.fruitpress": "Fruit Press"
+  "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
+  "block.foody.fruitpress": "Fruit Press",
+  "block.foody.pealer": "Pealer",
+  "itemGroup.tabfoodytabfood": "Foody+ Food"
 }
