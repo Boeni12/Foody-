@@ -31,7 +31,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.foody.procedures.PralerProcedureProcedure;
+import net.mcreator.foody.procedures.PealerPrccedureProcedure;
 import net.mcreator.foody.FoodyElements;
 import net.mcreator.foody.Foody;
 
@@ -78,7 +78,7 @@ public class PealerGUIGui extends FoodyElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new Inventory(2);
+			this.internal = new Inventory(3);
 			if (extraData != null) {
 				BlockPos pos = extraData.readBlockPos();
 				this.x = pos.getX();
@@ -91,11 +91,13 @@ public class PealerGUIGui extends FoodyElements.ModElement {
 			internal.openInventory(inv.player);
 			this.customSlots.put(0, this.addSlot(new Slot(internal, 0, 28, 35) {
 			}));
-			this.customSlots.put(1, this.addSlot(new Slot(internal, 1, 122, 35) {
+			this.customSlots.put(1, this.addSlot(new Slot(internal, 1, 121, 36) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
+			}));
+			this.customSlots.put(2, this.addSlot(new Slot(internal, 2, 28, 10) {
 			}));
 			int si;
 			int sj;
@@ -122,18 +124,18 @@ public class PealerGUIGui extends FoodyElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 2) {
-					if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
+				if (index < 3) {
+					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
-					if (index < 2 + 27) {
-						if (!this.mergeItemStack(itemstack1, 2 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
+					if (index < 3 + 27) {
+						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 2, 2 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -398,7 +400,7 @@ public class PealerGUIGui extends FoodyElements.ModElement {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
-				PralerProcedureProcedure.executeProcedure($_dependencies);
+				PealerPrccedureProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

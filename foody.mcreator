@@ -66,22 +66,6 @@
       "ids": {}
     },
     {
-      "name": "PralerProcedure",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Craftingtable",
       "type": "block",
       "sortid": 7,
@@ -90,17 +74,9 @@
       "ids": {}
     },
     {
-      "name": "CraftingTableGUI",
-      "type": "gui",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CraftingTableProcedure",
+      "name": "PealerPrccedure",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {},
