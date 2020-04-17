@@ -17,7 +17,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
@@ -27,12 +26,10 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.foody.procedures.PressFruitProcedureProcedure;
 import net.mcreator.foody.FoodyElements;
 import net.mcreator.foody.Foody;
 
@@ -41,11 +38,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @FoodyElements.ModElement.Tag
-public class FruitPressGuiGui extends FoodyElements.ModElement {
+public class CraftingTableGUIGui extends FoodyElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public FruitPressGuiGui(FoodyElements instance) {
-		super(instance, 2);
+	public CraftingTableGUIGui(FoodyElements instance) {
+		super(instance, 8);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -61,7 +58,7 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 
 	@SubscribeEvent
 	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("fruitpressgui"));
+		event.getRegistry().register(containerType.setRegistryName("craftingtablegui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -79,7 +76,7 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new Inventory(3);
+			this.internal = new Inventory(5);
 			if (extraData != null) {
 				BlockPos pos = extraData.readBlockPos();
 				this.x = pos.getX();
@@ -90,15 +87,15 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 					this.internal = (IInventory) ent;
 			}
 			internal.openInventory(inv.player);
-			this.customSlots.put(0, this.addSlot(new Slot(internal, 0, 22, 27) {
+			this.customSlots.put(0, this.addSlot(new Slot(internal, 0, 45, 19) {
 			}));
-			this.customSlots.put(1, this.addSlot(new Slot(internal, 1, 22, 53) {
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(Items.GLASS_BOTTLE, (int) (1)).getItem() == stack.getItem());
-				}
+			this.customSlots.put(1, this.addSlot(new Slot(internal, 1, 67, 18) {
 			}));
-			this.customSlots.put(2, this.addSlot(new Slot(internal, 2, 71, 42) {
+			this.customSlots.put(2, this.addSlot(new Slot(internal, 2, 45, 40) {
+			}));
+			this.customSlots.put(3, this.addSlot(new Slot(internal, 3, 67, 41) {
+			}));
+			this.customSlots.put(4, this.addSlot(new Slot(internal, 4, 115, 30) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -129,18 +126,18 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 3) {
-					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
+				if (index < 5) {
+					if (!this.mergeItemStack(itemstack1, 5, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
-					if (index < 3 + 27) {
-						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 5, false)) {
+					if (index < 5 + 27) {
+						if (!this.mergeItemStack(itemstack1, 5 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 5, 5 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -272,7 +269,7 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("foody:textures/fruitpressgui.png");
+		private static final ResourceLocation texture = new ResourceLocation("foody:textures/craftingtablegui.png");
 		@Override
 		public void render(int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground();
@@ -287,8 +284,6 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("foody:textures/bottl2.png"));
-			this.blit(this.guiLeft + 22, this.guiTop + 52, 0, 0, 256, 256);
 		}
 
 		@Override
@@ -298,7 +293,6 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Fruit-Press", 59, 4, -16777216);
 		}
 
 		@Override
@@ -311,10 +305,6 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 107, this.guiTop + 40, 60, 20, "Press!", e -> {
-				Foody.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-				handleButtonAction(entity, 0, x, y, z);
-			}));
 		}
 	}
 
@@ -404,13 +394,6 @@ public class FruitPressGuiGui extends FoodyElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				PressFruitProcedureProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

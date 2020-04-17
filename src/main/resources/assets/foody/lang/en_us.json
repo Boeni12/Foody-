@@ -2,5 +2,6 @@
   "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
   "block.foody.fruitpress": "Fruit Press",
   "block.foody.pealer": "Pealer",
-  "itemGroup.tabfoodytabfood": "Foody+ Food"
+  "itemGroup.tabfoodytabfood": "Foody+ Food",
+  "block.foody.craftingtable": "Craftingtable"
 }

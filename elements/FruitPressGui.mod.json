@@ -36,7 +36,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "Items.GLASS_BOTTLE"
           },
           "id": 1,
           "name": "Slot #1",
@@ -65,6 +65,15 @@
           "name": "Press!",
           "x": 464,
           "y": 154
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bottl2.png",
+          "name": "bottl2.png",
+          "x": 294,
+          "y": 178
         }
       }
     ]

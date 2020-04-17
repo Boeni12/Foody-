@@ -80,6 +80,38 @@
           }
         ]
       }
+    },
+    {
+      "name": "Craftingtable",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CraftingTableGUI",
+      "type": "gui",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CraftingTableProcedure",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -89,7 +121,8 @@
       "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
       "block.foody.fruitpress": "Fruit Press",
       "block.foody.pealer": "Pealer",
-      "itemGroup.tabfoodytabfood": "Foody+ Food"
+      "itemGroup.tabfoodytabfood": "Foody+ Food",
+      "block.foody.craftingtable": "Craftingtable"
     }
   },
   "workspaceSettings": {
