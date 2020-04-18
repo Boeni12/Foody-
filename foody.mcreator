@@ -50,22 +50,6 @@
       "ids": {}
     },
     {
-      "name": "Pealer",
-      "type": "block",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "PealerGUI",
-      "type": "gui",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "Craftingtable",
       "type": "block",
       "sortid": 7,
@@ -74,9 +58,25 @@
       "ids": {}
     },
     {
-      "name": "PealerPrccedure",
+      "name": "Cuttingboard",
+      "type": "block",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CuttingboardGUI",
+      "type": "gui",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CuttingBoardProcedure",
       "type": "procedure",
-      "sortid": 8,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -88,14 +88,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "FruitPressAdvancement",
-      "type": "achievement",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -103,11 +95,9 @@
   "language_map": {
     "en_us": {
       "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
-      "advancements.fruitpressadvancement.descr": "You press that thing!!!",
       "block.foody.fruitpress": "Fruit Press",
-      "block.foody.pealer": "Pealer",
+      "block.foody.cuttingboard": "Cutting Board",
       "itemGroup.tabfoodytabfood": "Foody+ Food",
-      "advancements.fruitpressadvancement.title": "Fruit Press Advancement",
       "block.foody.craftingtable": "Craftingtable"
     }
   },

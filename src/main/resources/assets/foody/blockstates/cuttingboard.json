@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "foody:block/cuttingboard"
+    },
+    "facing=east": {
+      "model": "foody:block/cuttingboard",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "foody:block/cuttingboard",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "foody:block/cuttingboard",
+      "y": 270
+    }
+  }
+}

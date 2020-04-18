@@ -2,17 +2,17 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "empty",
+    "texture": "oak_planks",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 10,
-    "customModelName": "Normal",
-    "rotationMode": 0,
-    "hasTransparency": false,
-    "transparencyType": "SOLID",
+    "renderType": 2,
+    "customModelName": "schneidebrett:default",
+    "rotationMode": 1,
+    "hasTransparency": true,
+    "transparencyType": "CUTOUT",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
@@ -20,7 +20,7 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Pealer",
+    "name": "Cutting Board",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -28,7 +28,7 @@
     "creativeTab": {
       "value": "CUSTOM:FoodyTabMachinesBlocks"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "affectedBySilkTouch": true,
     "customDrop": {
       "value": ""
@@ -38,9 +38,9 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
-      "value": "ROCK"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -54,9 +54,9 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "WOOD"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -70,7 +70,7 @@
     "particleAmount": 4,
     "particleSpawningCondition": "ALWAYS",
     "hasInventory": false,
-    "guiBoundTo": "PealerGUI",
+    "guiBoundTo": "CuttingboardGUI",
     "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,

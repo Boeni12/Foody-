@@ -1,0 +1,8 @@
+{
+  "parent": "foody:custom/schneidebrett",
+  "textures": {
+    "all": "foody:blocks/oak_planks",
+    "particle": "foody:blocks/oak_planks",
+    "0": "foody:blocks/oak_planks"
+  }
+}

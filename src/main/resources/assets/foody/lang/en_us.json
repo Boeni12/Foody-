@@ -1,9 +1,7 @@
 {
   "itemGroup.tabfoodytabmachinesblocks": "Foody+ Machines/Blocks",
-  "advancements.fruitpressadvancement.descr": "You press that thing!!!",
   "block.foody.fruitpress": "Fruit Press",
-  "block.foody.pealer": "Pealer",
+  "block.foody.cuttingboard": "Cutting Board",
   "itemGroup.tabfoodytabfood": "Foody+ Food",
-  "advancements.fruitpressadvancement.title": "Fruit Press Advancement",
   "block.foody.craftingtable": "Craftingtable"
 }
